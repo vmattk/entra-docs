@@ -31,7 +31,7 @@ To reduce the configuration administrative effort, you should first consider the
 > With either configuration option chosen, a required initial sync (Full Sync) to apply the changes, is performed automatically over the next sync cycle.
 
 > [!IMPORTANT]
-> Configuring selective password hash synchronization directly influences password writeback. Password changes or password resets that are initiated in Microsoft Entra ID write back to on-premises Active Directory only if the user is in scope for password hash synchronization.
+> Configuring selective password hash synchronization directly influences password writeback. Password changes or password resets that are initiated in Microsoft Entra ID write back to on-premises Active Directory only if the user is in scope for password hash synchronization. Additionally, identities synchronized from on-premises Active Directory that are not included in the scope for selective password hash synchronization will be unable to set or reset their respective password in Microsoft Entra ID (including administratively).  It is important to carefully consider the scope and impact of users who are both synchronized and in scope for selective password hash synchronization.
 
 > [!IMPORTANT]
 > Selective password hash synchronization is supported in Microsoft Entra Connect 1.6.2.4 or later. If you're using a version lower than that, upgrade to the latest version.
